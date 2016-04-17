@@ -1,9 +1,9 @@
 {
     "name": "caponica/amazon-mws-bundle",
     "type": "symfony-bundle",
+    "license": "MIT",
     "description": "Symfony2 service wrapper for Amazon MWS PHP API",
     "keywords": ["amazon", "mws", "symfony"],
-    "license": "MIT",
     "minimum-stability": "dev",
     "authors": [
         {
@@ -15,7 +15,7 @@
     "require": {
         "php": ">=5.3.2",
         "symfony/symfony": ">=2.1.x-dev",
-        "caponica/amazon-mws-complete": "dev-master"
+        "caponica/amazon-mws-complete": "1.~"
     },
     
     "autoload": {
