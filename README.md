@@ -78,5 +78,5 @@ Usage
 To access the service, just reference it by the service name you defined above. E.g., from a controller:
 
     /** @var \Caponica\AmazonMwsBundle\MwsClientPool $mwsClientPoolUk */
-    $mwsClientPoolUk = $this->getContainer()->get('caponica_mws_client_pool_uk');
+    $mwsClientPoolUk = $this->container->get('caponica_mws_client_pool_uk');
     $mwsProductClientUk = $mwsClientPoolUk->getMwsProductClient();
