@@ -5,7 +5,7 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="caponica_amazon_mws.client_pool.class">Caponica\AmazonMwsBundle\MwsClientPool</parameter>
+        <parameter key="caponica_amazon_mws.client_pool.class">CaponicaAmazonMwsComplete\ClientPool\MwsClientPool</parameter>
     </parameters>
 
 </container>

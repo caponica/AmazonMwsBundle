@@ -44,19 +44,17 @@ method you like to load the relevant configuration parameters and pass them to s
 ``` yaml
 # app/config/parameters.yml
 caponica_amazon_mws_config_de:
+    seller_id:           your_seller_id_de
     access_key:          your_access_key_de
     secret_key:          your_secret_key_de
     application_name:    your_app_name
     application_version: 1.0
-    config:
-        ServiceURL: 'https://mws-eu.amazonservices.com/Products/2011-10-01'
 caponica_amazon_mws_config_uk:
+    seller_id:           your_seller_id_uk
     access_key:          your_access_key_uk
     secret_key:          your_secret_key_uk
     application_name:    your_app_name
     application_version: your_app_version
-    config:
-        ServiceURL: 'https://mws.amazonservices.co.uk/Products/2011-10-01'
 ```
 
 ``` yaml
@@ -77,6 +75,6 @@ Usage
 
 To access the service, just reference it by the service name you defined above. E.g., from a controller:
 
-    /** @var \Caponica\AmazonMwsBundle\MwsClientPool $mwsClientPoolUk */
+    /** @var CaponicaAmazonMwsComplete\ClientPool\MwsClientPool $mwsClientPoolUk */
     $mwsClientPoolUk = $this->container->get('caponica_mws_client_pool_uk');
-    $mwsProductClientUk = $mwsClientPoolUk->getMwsProductClient();
+    $mwsProductClientPackUk = $mwsClientPoolUk->getProductClientPack();
