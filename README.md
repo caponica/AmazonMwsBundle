@@ -49,12 +49,14 @@ caponica_amazon_mws_config_de:
     secret_key:          your_secret_key_de
     application_name:    your_app_name
     application_version: 1.0
+    amazon_site:         DE
 caponica_amazon_mws_config_uk:
     seller_id:           your_seller_id_uk
     access_key:          your_access_key_uk
     secret_key:          your_secret_key_uk
     application_name:    your_app_name
     application_version: your_app_version
+    amazon_site:         UK
 ```
 
 ``` yaml
