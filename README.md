@@ -71,6 +71,31 @@ caponica_amazon_mws_config_uk:
             - [ setConfig, [ %caponica_amazon_mws_config_uk% ]]
 ```
 
+Often multiple marketplaces in the same region will share a single configuration. In these cases you can use the 
+`siteCode` configuration parameter to re-use the same configuration:
+
+``` yaml
+# app/config/parameters.yml
+caponica_amazon_mws_config_europe:
+    seller_id:           your_seller_id_europe
+    access_key:          your_access_key_europe
+    secret_key:          your_secret_key_europe
+    application_name:    your_app_name
+    application_version: 1.0
+    amazon_site:         DE # just set one valid site here
+```
+
+``` yaml
+# services.yml
+    caponica_mws_client_pool_de:
+        class:      %caponica_amazon_mws.client_pool.class%
+        calls:
+            - [ setConfig, [ %caponica_amazon_mws_config_europe%, 'DE' ]]
+    caponica_mws_client_pool_uk:
+        class:      %caponica_amazon_mws.client.class%
+        calls:
+            - [ setConfig, [ %caponica_amazon_mws_config_europe%, 'UK' ]]
+```
 
 Usage
 -----
