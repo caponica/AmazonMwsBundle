@@ -65,6 +65,8 @@ caponica_amazon_mws_config_uk:
         class:      %caponica_amazon_mws.client_pool.class%
         calls:
             - [ setConfig, [ %caponica_amazon_mws_config_de% ]]
+        arguments:
+            - '@your_logger' # optional Logger, see caponica/amazon-mws-complete docs
     caponica_mws_client_pool_uk:
         class:      %caponica_amazon_mws.client.class%
         calls:
@@ -89,8 +91,6 @@ caponica_amazon_mws_config_europe:
 # services.yml
     caponica_mws_client_pool_de:
         class:      %caponica_amazon_mws.client_pool.class%
-        arguments:
-            - '@your_logger' # optional Logger, see caponica/amazon-mws-complete docs
         calls:
             - [ setConfig, [ %caponica_amazon_mws_config_europe%, 'DE' ]]
     caponica_mws_client_pool_uk:
