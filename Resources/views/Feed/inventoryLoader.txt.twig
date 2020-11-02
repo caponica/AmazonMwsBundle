@@ -1,0 +1,7 @@
+{##
+  # @var InventoryLoaderRecord[] records    Array of CaponicaAmazonMwsComplete\Domain\Feed\InventoryLoaderRecord objects
+  #}
+sku	product-id	product-id-type	price	minimum-seller-allowed-price	maximum-seller-allowed-price	item-condition	quantity	add-delete	will-ship-internationally	expedited-shipping	item-note	fulfillment-center-id	merchant-shipping-group-name	product_tax_code	handling-time	batteries_required	are_batteries_included	battery_cell_composition	battery_type	number_of_batteries	battery_weight	battery_weight_unit_of_measure	number_of_lithium_ion_cells	number_of_lithium_metal_cells	lithium_battery_packaging	lithium_battery_energy_content	lithium_battery_energy_content_unit_of_measure	lithium_battery_weight	lithium_battery_weight_unit_of_measure	supplier_declared_dg_hz_regulation1	supplier_declared_dg_hz_regulation2	supplier_declared_dg_hz_regulation3	supplier_declared_dg_hz_regulation4	supplier_declared_dg_hz_regulation5	hazmat_united_nations_regulatory_id	safety_data_sheet_url	item_weight	item_weight_unit_of_measure	item_volume	item_volume_unit_of_measure	flash_point	ghs_classification_class1	ghs_classification_class2	ghs_classification_class3	list_price	uvp_list_price
+{% for record in records %}
+{{ record.sku }}	{{ record.identifier }}	{{ record.identifierType }}	{{ record.price }}	{{ record.minPrice }}	{{ record.maxPrice }}	{{ record.condition }}		{{ record.addDeleteCode }}				{{ record.fulfilmentCentre }}				No														Not Applicable	Not Applicable	Not Applicable	Not Applicable	Not Applicable
+{% endfor %}
